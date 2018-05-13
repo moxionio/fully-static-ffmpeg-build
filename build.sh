@@ -158,11 +158,11 @@ cd $BUILD_DIR && wget -q https://github.com/moxionio/FFmpeg/archive/moxion.tar.g
         for A in /usr/lib/libopencv_*.a;do ar x $A;done && \
         ar x /usr/lib/gcc/x86_64-linux-gnu/$G_PLUS_PLUS_VER/libstdc++.a && \
 	ar x /usr/lib/x86_64-linux-gnu/libm.a && \
-        cd $BUILD_DIR/ffmpeg-$FFMPEG_VER/transform360-$TRANSFORM360_VER/Transform360 && \
+        cd $BUILD_DIR/FFmpeg-$FFMPEG_VER/transform360-$TRANSFORM360_VER/Transform360 && \
         rm libTransform360.a && \
         # push all libstdc++ and opencv objects into libTransform360.a [cause fully static linkage is required]
         ar cr libTransform360.a  CMakeFiles/Transform360.dir/Library/VideoFrameTransform.cpp.o CMakeFiles/Transform360.dir/Library/VideoFrameTransformHandler.cpp.o $BUILD_DIR/objects/*o && \
-        make install && cd $BUILD_DIR/ffmpeg-$FFMPEG_VER && \
+        make install && cd $BUILD_DIR/FFmpeg-$FFMPEG_VER && \
 	# adjust the include paths when in FFmpeg context
 	sed -e "s@transform360/VideoFrameTransformHandler.h@Transform360/Library/VideoFrameTransformHandler.h@g" -e "s@transform360/VideoFrameTransformHelper.h@Transform360/Library/VideoFrameTransformHelper.h@g" transform360-master/Transform360/vf_transform360.c > libavfilter/vf_transform360.c && \
 	cp $BUILD_DIR/Makefile.transform360.patch libavfilter && patch -p0 < libavfilter/Makefile.transform360.patch && \
