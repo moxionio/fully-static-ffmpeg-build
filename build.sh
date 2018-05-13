@@ -146,7 +146,7 @@ cd $BUILD_DIR && wget -q https://rtmpdump.mplayerhq.hu/download/rtmpdump-$LIBRTM
 # build ffmpeg with transform360
 cd $BUILD_DIR && wget -q https://github.com/moxionio/FFmpeg/archive/moxion.tar.gz --output-document ffmpeg-$FFMPEG_VER.tar.gz && \
         tar zxf ffmpeg-$FFMPEG_VER.tar.gz && \
-        cd ffmpeg-$FFMPEG_VER && \
+        cd FFmpeg-$FFMPEG_VER && \
 	wget -q https://github.com/facebook/transform360/archive/$TRANSFORM360_VER.zip -O transform360-$TRANSFORM360_VER.zip && \
         unzip transform360-$TRANSFORM360_VER.zip && \
         cd transform360-$TRANSFORM360_VER/Transform360 && \
