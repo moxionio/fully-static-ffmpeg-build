@@ -16,11 +16,11 @@ apt-get update -qq && \
 
 apt-get install -y -qq \
         g++-$G_PLUS_PLUS_VER \
-	libopencv-dev \
+		libopencv-dev \
         bzip2 \
         unzip \
         wget \
-	patch \
+		patch \
         build-essential \
         autoconf \
         automake \
@@ -38,7 +38,8 @@ apt-get install -y -qq \
         libhdf5-serial-dev \
         libfreetype6-dev \
         liblapack-dev \
-	libssl-dev \
+		libssl-dev \
+		libenca-dev
         python \
         python-setuptools \
         python-dev \
