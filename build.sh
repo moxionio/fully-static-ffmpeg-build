@@ -201,7 +201,6 @@ cd $BUILD_DIR && wget -q https://github.com/moxionio/FFmpeg/archive/moxion.tar.g
 --enable-libfreetype \
 --enable-fontconfig \
 --enable-avisynth \
---disable-autodetect \
 --disable-vdpau \
 --enable-libopencv \
 --enable-openssl \
