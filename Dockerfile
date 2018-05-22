@@ -1,4 +1,4 @@
-FROM ubuntu:12.04
+FROM ubuntu:14.04
 
 ENV BUILD_DIR=/tmp/build
 RUN mkdir -p $BUILD_DIR/test
